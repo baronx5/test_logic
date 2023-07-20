@@ -18,9 +18,9 @@ class AppTheme {
         iconTheme: IconThemeData(
           color: AppTheme.colors.color4,
         ),
-        titleTextStyle: const TextStyle(fontFamily: 'han', fontSize: 24),
+        titleTextStyle: const TextStyle(fontFamily: 'Tajawal', fontSize: 24),
       ),
-      fontFamily: 'han',
+      fontFamily: 'Tajawal',
       textTheme: TextTheme(
         titleSmall: TextStyle(
           fontSize: 18,
@@ -61,7 +61,7 @@ class AppTheme {
           foregroundColor: AppTheme.colors.color4,
           backgroundColor: AppTheme.colors.color0,
           textStyle: TextStyle(
-              fontSize: 16.0, fontFamily: 'han', color: AppTheme.colors.color4),
+              fontSize: 16.0, fontFamily: 'Tajawal', color: AppTheme.colors.color4),
           side: BorderSide(
               color: AppTheme.colors.color4, width: 1), //<-- SEE HERE
         ),
@@ -82,7 +82,7 @@ class AppTheme {
           color: AppTheme.colors.color3,
         ),
       ),
-      fontFamily: 'Janna',
+      fontFamily: 'Tajawal',
       textTheme: TextTheme(
         titleMedium: const TextStyle(
           fontSize: 30,

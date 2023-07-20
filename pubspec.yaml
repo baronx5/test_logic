@@ -96,3 +96,7 @@ flutter:
     - family: rak
       fonts:
         - asset: asset/fonts/Rakkas-Regular.ttf
+
+    - family: Tajawal
+      fonts:
+        - asset: asset/fonts/Tajawal-Regular.ttf

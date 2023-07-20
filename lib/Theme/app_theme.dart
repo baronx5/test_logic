@@ -18,9 +18,9 @@ class AppTheme {
         iconTheme: IconThemeData(
           color: AppTheme.colors.color4,
         ),
-        titleTextStyle: const TextStyle(fontFamily: 'Tajawal', fontSize: 24),
+        titleTextStyle: const TextStyle(fontFamily: 'han', fontSize: 24),
       ),
-      fontFamily: 'Tajawal',
+      fontFamily: 'han',
       textTheme: TextTheme(
         titleSmall: TextStyle(
           fontSize: 18,
@@ -48,7 +48,7 @@ class AppTheme {
           color: AppTheme.colors.color4,
         ),
         headlineSmall: TextStyle(
-          fontSize: 16,
+          fontSize: 18,
           color: AppTheme.colors.color0,
         ),
         headlineMedium: TextStyle(
@@ -61,7 +61,7 @@ class AppTheme {
           foregroundColor: AppTheme.colors.color4,
           backgroundColor: AppTheme.colors.color0,
           textStyle: TextStyle(
-              fontSize: 16.0, fontFamily: 'Tajawal', color: AppTheme.colors.color4),
+              fontSize: 16.0, fontFamily: 'han', color: AppTheme.colors.color4),
           side: BorderSide(
               color: AppTheme.colors.color4, width: 1), //<-- SEE HERE
         ),

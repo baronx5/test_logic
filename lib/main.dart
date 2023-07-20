@@ -19,7 +19,7 @@ class MyHomePage extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text(
-            'السوق العالمي',
+            'السوق العربي',
           ),
           leading: const Icon(Icons.shopping_bag_outlined),
         ),
@@ -29,6 +29,7 @@ class MyHomePage extends StatelessWidget {
           children: const [
             WelcomeMsg(),
             HomeMenu(),
+
             ListBestSales(),
           ],
         ),

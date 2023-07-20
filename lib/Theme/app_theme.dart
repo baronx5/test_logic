@@ -18,7 +18,7 @@ class AppTheme {
         iconTheme: IconThemeData(
           color: AppTheme.colors.color4,
         ),
-        titleTextStyle: const TextStyle(fontFamily: 'han', fontSize: 24),
+        titleTextStyle: TextStyle(fontFamily: 'han', fontSize: 24, color: AppTheme.colors.color4),
       ),
       fontFamily: 'han',
       textTheme: TextTheme(

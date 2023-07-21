@@ -67,6 +67,8 @@ class AppTheme {
               color: AppTheme.colors.color4, width: 1), //<-- SEE HERE
         ),
       ),
+      
+  
     );
   }
 

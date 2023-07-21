@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'dummy_data.dart';
-import 'models/category.dart';
+import '../dummy_data.dart';
+import '../models/category.dart';
 
 class HomeMenu extends StatefulWidget {
   const HomeMenu({super.key});

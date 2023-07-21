@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_logic/screen/menu.dart';
 
 import '../dummy_data.dart';
 import '../models/product.dart';
@@ -40,20 +41,30 @@ class ListBestSales extends StatelessWidget {
                 return Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Container(
-                      margin: const EdgeInsets.only(right: 10.0),
-                      //color: Colors.greenAccent,
-                      width: 200,
-                      height: 300,
-                      alignment: Alignment.topLeft,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: NetworkImage(cat[i].imgUrl),
-                            fit: BoxFit.cover),
+                    //TODO  CHANGE THIS LATER NAVIGATOR LOCATION // DEMO NOW
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomeMenu()),  
+                        );
+                      },
+                      child: Container(
+                        margin: const EdgeInsets.only(right: 10.0),
+                        //color: Colors.greenAccent,
+                        width: 200,
+                        height: 300,
+                        alignment: Alignment.topLeft,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: NetworkImage(cat[i].imgUrl),
+                              fit: BoxFit.cover),
+                        ),
+                        child: const Padding(
+                            padding: EdgeInsets.only(top: 5.0, left: 5.0),
+                            child: Icon(Icons.favorite_border_rounded)),
                       ),
-                      child: const Padding(
-                          padding: EdgeInsets.only(top: 5.0, left: 5.0),
-                          child: Icon(Icons.favorite_border_rounded)),
                     ),
                     Text(
                       cat[i].name,

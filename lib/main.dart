@@ -12,6 +12,7 @@ class MainAppNavigationBage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: MainNavigation(),
     );
   }
@@ -42,6 +43,7 @@ class _MainNavigationState extends State<MainNavigation> {
       'Index 3: Settings',
       style: optionStyle,
     ),
+    
   ];
 
   void _onItemTapped(int index) {
@@ -81,7 +83,9 @@ class _MainNavigationState extends State<MainNavigation> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: AppTheme.colors.color4,
+        selectedLabelStyle: const TextStyle(fontFamily: 'han'),
         unselectedItemColor: AppTheme.colors.color2,
+        unselectedLabelStyle: const TextStyle(fontFamily: 'han'),
         elevation: 0.0,
         onTap: _onItemTapped,
       ),

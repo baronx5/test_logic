@@ -29,7 +29,6 @@ class MyHomePage extends StatelessWidget {
           children: const [
             WelcomeMsg(),
             HomeMenu(),
-
             ListBestSales(),
           ],
         ),

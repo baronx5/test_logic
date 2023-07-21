@@ -19,6 +19,10 @@ class ListBestSales extends StatelessWidget {
           child: OutlinedButton(
               onPressed: (() {}), child: const Text('تسوق المزيد من الماركات')),
         ),
+        Padding(
+          padding: const EdgeInsets.only(top:15.0),
+          child: SizedBox(width:double.infinity,child: Text('تشكيلة جديدة من النظارات الفاخرة', style: Theme.of(context).textTheme.titleSmall, textAlign: TextAlign.end,)),
+        ),
         SizedBox(
           height: 400,
           child: ListView.builder(
@@ -30,7 +34,7 @@ class ListBestSales extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      margin: const EdgeInsets.only(right: 10.0, top: 25.0),
+                      //margin: const EdgeInsets.only(right: 10.0, top: 25.0),
                       //color: Colors.greenAccent,
                       width: 200,
                       height: 300,
@@ -41,7 +45,7 @@ class ListBestSales extends StatelessWidget {
                       ),
                       child: const Padding (padding: EdgeInsets.only(top: 5.0,left: 5.0), child: Icon(Icons.favorite_border_rounded)),
                     ),
-                    Text(cat[i].name),
+                    Text(cat[i].name, style: Theme.of(context).textTheme.labelMedium,),
                     Text(cat[i].price),
                   ],
                 );

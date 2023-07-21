@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_logic/screen/menu.dart';
+import 'package:test_logic/screen/product_page.dart';
 
 import '../dummy_data.dart';
 import '../models/product.dart';
@@ -40,6 +40,7 @@ class ListBestSales extends StatelessWidget {
                 // ندخلها بالبلدر علشان اللوب
                 return Column(
                   mainAxisAlignment: MainAxisAlignment.start,
+                  //crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     //TODO  CHANGE THIS LATER NAVIGATOR LOCATION // DEMO NOW
                     GestureDetector(
@@ -47,7 +48,7 @@ class ListBestSales extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const HomeMenu()),  
+                              builder: (context) => const ProductPageView()),  
                         );
                       },
                       child: Container(

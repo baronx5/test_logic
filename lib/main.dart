@@ -27,7 +27,7 @@ class MainNavigation extends StatefulWidget {
 class _MainNavigationState extends State<MainNavigation> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold, fontFamily: 'han');
   static const List<Widget> _widgetOptions = <Widget>[
     MyHomePage(),
     Text(
@@ -59,28 +59,30 @@ class _MainNavigationState extends State<MainNavigation> {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: const Icon(Icons.home),
-            label: 'Home',
-            backgroundColor: AppTheme.colors.color4,
+            icon:  const Icon(Icons.home_outlined),
+            label: 'الرئيسية',
+            backgroundColor: AppTheme.colors.color0,
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
-            backgroundColor: Colors.green,
+           BottomNavigationBarItem(
+            icon: const Icon(Icons.shopping_bag_outlined),
+            label: 'حقيبة التسوق',
+            backgroundColor: AppTheme.colors.color0,
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
-            backgroundColor: Colors.purple,
+           BottomNavigationBarItem(
+            icon: const Icon(Icons.favorite_border_outlined),
+            label: 'المفضلة',
+            backgroundColor: AppTheme.colors.color0,
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-            backgroundColor: Colors.pink,
+           BottomNavigationBarItem(
+            icon: const Icon(Icons.settings),
+            label: 'الحساب',
+            backgroundColor: AppTheme.colors.color0,
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: AppTheme.colors.color0,
+        selectedItemColor: AppTheme.colors.color4,
+        unselectedItemColor: AppTheme.colors.color2,
+        elevation: 0.0,
         onTap: _onItemTapped,
       ),
     );

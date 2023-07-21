@@ -8,7 +8,8 @@ class ListBestSales extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<ListOfProducts> cat = listOfProducts.map((e) => ListOfProducts.fromMap(e)).toList();
+    List<ListOfProducts> cat =
+        listOfProducts.map((e) => ListOfProducts.fromMap(e)).toList();
 
     return Column(
       children: [
@@ -20,8 +21,14 @@ class ListBestSales extends StatelessWidget {
               onPressed: (() {}), child: const Text('تسوق المزيد من الماركات')),
         ),
         Padding(
-          padding: const EdgeInsets.only(top:15.0),
-          child: SizedBox(width:double.infinity,child: Text('تشكيلة جديدة من النظارات الفاخرة', style: Theme.of(context).textTheme.titleSmall, textAlign: TextAlign.end,)),
+          padding: const EdgeInsets.only(top: 15.0),
+          child: SizedBox(
+              width: double.infinity,
+              child: Text(
+                'تشكيلة جديدة من النظارات الفاخرة',
+                style: Theme.of(context).textTheme.titleSmall,
+                textAlign: TextAlign.end,
+              )),
         ),
         SizedBox(
           height: 400,
@@ -34,18 +41,24 @@ class ListBestSales extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      //margin: const EdgeInsets.only(right: 10.0, top: 25.0),
+                      margin: const EdgeInsets.only(right: 10.0),
                       //color: Colors.greenAccent,
                       width: 200,
                       height: 300,
                       alignment: Alignment.topLeft,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: NetworkImage(cat[i].imgUrl), fit: BoxFit.cover),
+                            image: NetworkImage(cat[i].imgUrl),
+                            fit: BoxFit.cover),
                       ),
-                      child: const Padding (padding: EdgeInsets.only(top: 5.0,left: 5.0), child: Icon(Icons.favorite_border_rounded)),
+                      child: const Padding(
+                          padding: EdgeInsets.only(top: 5.0, left: 5.0),
+                          child: Icon(Icons.favorite_border_rounded)),
                     ),
-                    Text(cat[i].name, style: Theme.of(context).textTheme.labelMedium,),
+                    Text(
+                      cat[i].name,
+                      style: Theme.of(context).textTheme.labelMedium,
+                    ),
                     Text(cat[i].price),
                   ],
                 );

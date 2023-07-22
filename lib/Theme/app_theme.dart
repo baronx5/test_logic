@@ -57,6 +57,7 @@ class AppTheme {
         ),
         labelMedium: TextStyle(fontSize: 16, color: AppTheme.colors.color4, fontWeight: FontWeight.bold)
       ),
+      ////////////////////////////// BUTTONS //////////////////////////////
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           foregroundColor: AppTheme.colors.color4,
@@ -67,6 +68,10 @@ class AppTheme {
               color: AppTheme.colors.color4, width: 1), //<-- SEE HERE
         ),
       ),
+      elevatedButtonTheme: ElevatedButtonThemeData(style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(AppTheme.colors.color4),
+      )),
+      ///////////////////////////////////////////////////////////////////////////
       
   
     );

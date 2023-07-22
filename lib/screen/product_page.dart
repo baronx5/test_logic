@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import '../Theme/app_theme.dart';
 
 const List<String> list = <String>['One', 'Two', 'Three', 'Four'];
@@ -111,7 +112,37 @@ class _ProductPageViewState extends State<ProductPageView> {
                         ),
                       ),
                       const Divider(),
-                      const Text('11'),
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('اختر الوانك المفضلة:'),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.history,
+                                size: 50.0,
+                                color: Colors.black,
+                              ),
+                              Icon(
+                                Icons.history,
+                                size: 50.0,
+                                color: Colors.redAccent,
+                              ),
+                              Icon(
+                                Icons.history,
+                                size: 50.0,
+                                color: Colors.green,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      const Divider(),
+                      SizedBox(
+                        height: 50.0,
+                        child: ElevatedButton(
+                            onPressed: () {}, child: const Text('ORDER NOW')),
+                      ),
                     ],
                   ),
                 ),

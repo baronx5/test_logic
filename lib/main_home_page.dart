@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_logic/screen/list_of_best_sales.dart';
 import 'package:test_logic/screen/welcome_msg.dart';
-
-import 'Theme/app_theme.dart';
 import 'screen/menu.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -10,10 +8,7 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.lightTheme(),
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: const Text(
             'السوق العربي',
@@ -29,7 +24,6 @@ class MyHomePage extends StatelessWidget {
             ListBestSales(),
           ],
         ),
-      ),
-    );
+      );
   }
 }

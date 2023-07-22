@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_logic/screen/Auth/login.dart';
 import 'package:test_logic/screen/product_page.dart';
 
 import '../dummy_data.dart';
@@ -19,7 +20,15 @@ class ListBestSales extends StatelessWidget {
           height: 50.0,
           width: double.infinity,
           child: OutlinedButton(
-              onPressed: (() {}), child: const Text('تسوق المزيد من الماركات')),
+              onPressed: (() {
+                // TODO HERE FOR TESTING.
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => LoginPage()),
+                );
+              }),
+              child: const Text('تسوق المزيد من الماركات')),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 15.0),
@@ -48,7 +57,7 @@ class ListBestSales extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ProductPageView()),  
+                              builder: (context) => const ProductPageView()),
                         );
                       },
                       child: Container(

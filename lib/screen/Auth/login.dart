@@ -10,7 +10,10 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('السوق العربي'), leading: const Icon(Icons.arrow_back),),
+      appBar: AppBar(
+        title: const Text('السوق العربي'),
+        leading: const Icon(Icons.arrow_back),
+      ),
       body: SafeArea(
         child: Center(
           child: Directionality(
@@ -31,7 +34,9 @@ class LoginPage extends StatelessWidget {
                         size: 100.0,
                       ),
                     ),
-                    const SizedBox(height: 40.0,),
+                    const SizedBox(
+                      height: 40.0,
+                    ),
                     Text(
                       'تسجيل الدخول لحسابك الخاص',
                       style: Theme.of(context).textTheme.titleMedium,
@@ -57,17 +62,27 @@ class LoginPage extends StatelessWidget {
                       width: double.infinity,
                       height: 50.0,
                       child: ElevatedButton(
-                          onPressed: () {}, child:  Text('تسجيل الدخول', style: Theme.of(context).textTheme.headlineMedium,)),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text(
+                            'تسجيل الدخول',
+                            style: Theme.of(context).textTheme.headlineMedium,
+                          )),
                     ),
                     const SizedBox(
                       height: 30,
                     ),
                     const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,                      children: [
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
                         Text('لاتملك حساب ؟'),
-                        Text('سجل معنا الأن', style: TextStyle(color: Colors.blue),),
+                        Text(
+                          'سجل معنا الأن',
+                          style: TextStyle(color: Colors.blue),
+                        ),
                       ],
-                    ), 
+                    ),
                   ]),
             ),
           ),

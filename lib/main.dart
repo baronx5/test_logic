@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:test_logic/screen/Auth/login.dart';
 import 'Theme/app_theme.dart';
 import 'main_home_page.dart';
 
@@ -15,7 +14,7 @@ class MainAppNavigationBage extends StatelessWidget {
     return MaterialApp(
       theme: AppTheme.lightTheme(),
       debugShowCheckedModeBanner: false,
-      home:  LoginPage(),
+      home:  const MainNavigation(),
     );
   }
 }
@@ -33,7 +32,6 @@ class _MainNavigationState extends State<MainNavigation> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold, fontFamily: 'han');
   static const List<Widget> _widgetOptions = <Widget>[
     MyHomePage(),
-    //LoginPage(),
     Text(
       'Index 2: School',
       style: optionStyle,

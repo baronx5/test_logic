@@ -112,27 +112,37 @@ class _ProductPageViewState extends State<ProductPageView> {
                         ),
                       ),
                       const Divider(),
-                      const Row(
+                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('اختر الوانك المفضلة:'),
+                          const Text('اختر الوانك المفضلة:'),
                           Row(
                             children: [
-                              Icon(
-                                Icons.history,
-                                size: 50.0,
-                                color: Colors.black,
-                              ),
-                              Icon(
-                                Icons.history,
-                                size: 50.0,
-                                color: Colors.redAccent,
-                              ),
-                              Icon(
-                                Icons.history,
-                                size: 50.0,
-                                color: Colors.green,
-                              ),
+
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  shape: CircleBorder(),
+                                  padding: EdgeInsets.all(15),
+                                  elevation: 0.0,
+                                  backgroundColor: Colors.amber
+                                ),
+                                onPressed: (){}, child: Text('one')),
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  shape: CircleBorder(),
+                                  padding: EdgeInsets.all(15),
+                                  elevation: 0.0,
+                                  backgroundColor: Colors.blueAccent
+                                ),
+                                onPressed: (){}, child: Text('one')),
+                                ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  shape: CircleBorder(),
+                                  padding: EdgeInsets.all(15),
+                                  elevation: 0.0,
+                                  backgroundColor: Colors.purpleAccent
+                                ),
+                                onPressed: (){}, child: Text('three')),
                             ],
                           ),
                         ],

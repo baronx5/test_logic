@@ -121,28 +121,28 @@ class _ProductPageViewState extends State<ProductPageView> {
 
                               ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  shape: CircleBorder(),
-                                  padding: EdgeInsets.all(15),
+                                  shape: const CircleBorder(),
+                                  padding: const EdgeInsets.all(15),
                                   elevation: 0.0,
                                   backgroundColor: Colors.amber
                                 ),
-                                onPressed: (){}, child: Text('one')),
+                                onPressed: (){}, child: const Text('one')),
                               ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  shape: CircleBorder(),
-                                  padding: EdgeInsets.all(15),
+                                  shape: const CircleBorder(),
+                                  padding: const EdgeInsets.all(15),
                                   elevation: 0.0,
                                   backgroundColor: Colors.blueAccent
                                 ),
-                                onPressed: (){}, child: Text('one')),
+                                onPressed: (){}, child: const Text('one')),
                                 ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  shape: CircleBorder(),
-                                  padding: EdgeInsets.all(15),
+                                  shape: const CircleBorder(),
+                                  padding: const EdgeInsets.all(15),
                                   elevation: 0.0,
                                   backgroundColor: Colors.purpleAccent
                                 ),
-                                onPressed: (){}, child: Text('three')),
+                                onPressed: (){}, child: const Text('three')),
                             ],
                           ),
                         ],

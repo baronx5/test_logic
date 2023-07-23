@@ -47,14 +47,16 @@ class LoginPage extends StatelessWidget {
                     MyTextField(
                         controller: emailTextController,
                         hintText: 'ادخل بريدك الالكتروني',
-                        obscureText: false),
+                        obscureText: false,
+                        prefixIcon: const Icon(Icons.email),),
                     const SizedBox(
                       height: 10.0,
                     ),
                     MyTextField(
                         controller: passwordTextController,
                         hintText: 'ادخل الرقم السري',
-                        obscureText: true),
+                        obscureText: true,
+                        prefixIcon: const Icon(Icons.key),),
                     const SizedBox(
                       height: 30,
                     ),

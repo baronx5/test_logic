@@ -4,12 +4,14 @@ class MyTextField extends StatelessWidget {
   final TextEditingController controller;
   final String hintText;
   final bool obscureText; 
+  final Widget prefixIcon;
 
   const MyTextField({
     super.key,
     required this.controller,
     required this.hintText,
     required this.obscureText,
+    required this.prefixIcon,
   });
 
   @override
@@ -20,6 +22,7 @@ class MyTextField extends StatelessWidget {
       style:  const TextStyle(fontSize: 18),
       decoration:  InputDecoration(
         fillColor: Colors.white,
+        prefixIcon: prefixIcon,
         filled: true,
         hintText: hintText,
         enabledBorder: const OutlineInputBorder(

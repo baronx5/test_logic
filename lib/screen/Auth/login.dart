@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_logic/components/text_field.dart';
+import 'package:test_logic/screen/Auth/register.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
@@ -45,18 +46,20 @@ class LoginPage extends StatelessWidget {
                       height: 20.0,
                     ),
                     MyTextField(
-                        controller: emailTextController,
-                        hintText: 'ادخل بريدك الالكتروني',
-                        obscureText: false,
-                        prefixIcon: const Icon(Icons.email),),
+                      controller: emailTextController,
+                      hintText: 'ادخل بريدك الالكتروني',
+                      obscureText: false,
+                      prefixIcon: const Icon(Icons.email),
+                    ),
                     const SizedBox(
                       height: 10.0,
                     ),
                     MyTextField(
-                        controller: passwordTextController,
-                        hintText: 'ادخل الرقم السري',
-                        obscureText: true,
-                        prefixIcon: const Icon(Icons.key),),
+                      controller: passwordTextController,
+                      hintText: 'ادخل الرقم السري',
+                      obscureText: true,
+                      prefixIcon: const Icon(Icons.key),
+                    ),
                     const SizedBox(
                       height: 30,
                     ),
@@ -75,13 +78,22 @@ class LoginPage extends StatelessWidget {
                     const SizedBox(
                       height: 30,
                     ),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('لاتملك حساب ؟'),
-                        Text(
-                          'سجل معنا الأن',
-                          style: TextStyle(color: Colors.blue),
+                        const Text('لاتملك حساب ؟'),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => RegisterPage()),
+                            );
+                          },
+                          child: const Text(
+                            'سجل معنا الأن',
+                            style: TextStyle(color: Colors.blue),
+                          ),
                         ),
                       ],
                     ),

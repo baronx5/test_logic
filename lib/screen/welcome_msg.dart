@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:test_logic/Theme/app_theme.dart';
+import 'package:test_logic/screen/Auth/login.dart';
+
+import 'Auth/register.dart';
 
 class WelcomeMsg extends StatelessWidget {
   const WelcomeMsg({super.key});
@@ -40,13 +43,26 @@ class WelcomeMsg extends StatelessWidget {
                         margin: const EdgeInsets.only(left: 10.0),
                         child: OutlinedButton(
                           child: const Text('تسجيل حساب جديد'),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => RegisterPage()),
+                            );
+                          },
                         ),
                       ),
                     ),
                     Expanded(
                       child: OutlinedButton(
-                          onPressed: () {}, child: const Text('تسجيل الدخول')),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => LoginPage()),
+                            );
+                          },
+                          child: const Text('تسجيل الدخول')),
                     ),
                   ],
                 ),

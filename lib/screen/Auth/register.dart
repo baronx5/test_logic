@@ -30,7 +30,7 @@ class RegisterPage extends StatelessWidget {
                         border: Border.all(color: Colors.black12),
                       ),
                       child: const Icon(
-                        Icons.lock,
+                        Icons.person,
                         size: 100.0,
                       ),
                     ),

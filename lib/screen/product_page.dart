@@ -73,9 +73,10 @@ class _ProductPageViewState extends State<ProductPageView> {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       SizedBox(
-                        height: 80,
+                        height: 50,
                         child: ListView.builder(
                           shrinkWrap: true,
+                          reverse: true,
                           itemCount: productQuery['images'].length,
                           itemBuilder: (context, index) {
                             return GestureDetector(
@@ -88,17 +89,20 @@ class _ProductPageViewState extends State<ProductPageView> {
                               },
                               child: Container(
                                 margin: const EdgeInsets.only(left: 10.0),
-                                width: 80,
+                                width: 50,
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
+                                    colorFilter: _currentPage == index? ColorFilter.mode(Colors.white.withOpacity(0.5), BlendMode.dstATop): ColorFilter.mode(Colors.white.withOpacity(0), BlendMode.dstATop),
                                       image: NetworkImage(
                                           productQuery['images'][index]),
                                       fit: BoxFit.cover),
+                                      
                                   border: Border.all(
                                     color: _currentPage == index
                                         ? AppTheme.colors.color4
                                         : Colors.grey,
-                                    width: 2,
+                                    width: 1,
+                                  
                                   ),
                                   borderRadius: BorderRadius.circular(50),
                                 ),

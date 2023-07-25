@@ -40,6 +40,10 @@ class _MainNavigationState extends State<MainNavigation> {
       'Index 3: Settings',
       style: optionStyle,
     ),
+    Text(
+      'Index 3: Account',
+      style: optionStyle,
+    ),
     
   ];
 

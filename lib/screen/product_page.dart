@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 import '../Theme/app_theme.dart';
-import 'package:test_logic/dummy_data.dart';
-
 
 const List<String> list = <String>['One', 'Two', 'Three', 'Four'];
-
-class ProductPageView extends StatefulWidget {
-   ProductPageView({super.key});
-
-
 
 Map<String, dynamic> productQuery = {
   'product_id': '1',
@@ -16,12 +9,14 @@ Map<String, dynamic> productQuery = {
   'description': 'Natural apple juice',
   'price': '1',
   'images': [
-    'https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZHJpbmtzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60, https://images.unsplash.com/photo-1497534446932-c925b458314e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZHJpbmtzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZHJpbmtzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60, https://images.unsplash.com/photo-1497534446932-c925b458314e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZHJpbmtzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
+    'https://images.unsplash.com/photo-1611930021559-4a5cb5c38da3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60',
+    'https://images.unsplash.com/photo-1611930021592-a8cfd5319ceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60',
+    'https://images.unsplash.com/photo-1611930021698-a55ec4d5fe6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60',
   ]
 };
 
-
+class ProductPageView extends StatefulWidget {
+  const ProductPageView({super.key});
 
   @override
   State<ProductPageView> createState() => _ProductPageViewState();
@@ -29,7 +24,7 @@ Map<String, dynamic> productQuery = {
 
 class _ProductPageViewState extends State<ProductPageView> {
   String dropdownValue = list.first;
-  PageController _pageController = PageController(initialPage: 0);
+  final PageController _pageController = PageController(initialPage: 0);
   int _currentPage = 0;
 
   @override
@@ -65,27 +60,38 @@ class _ProductPageViewState extends State<ProductPageView> {
               ),
             ],
           ),
-          SliverGrid(delegate: SliverChildBuilderDelegate(
-            (BuildContext context, int index) {
-              return GestureDetector(
-                onTap: (){
-                  _pageController.animateToPage(index, duration: Duration(milliseconds: 500), curve: Curves.ease,);
-                
-                },
-                child: Container(width: 50,
-                height: 50,
-                decoration: BoxDecoration(border: Border.all(
-                  color: _currentPage == index? Colors.blue : Colors.grey,
-                  width: 2,
-                ),
-                borderRadius: BorderRadius.circular(8),
-                ),
-                child: Image.network(productQuery[index]['images'], fit: BoxFit.cover),
-                ),
-              );
-            },
-            childCount: productQuery.length,
-          ), gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4,mainAxisSpacing: 8,crossAxisSpacing: 8)),
+          SliverGrid(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4, mainAxisSpacing: 8, crossAxisSpacing: 8),
+            delegate: SliverChildBuilderDelegate(
+              (BuildContext context, int index) {
+                return GestureDetector(
+                  onTap: () {
+                    _pageController.animateToPage(
+                      index,
+                      duration: const Duration(milliseconds: 500),
+                      curve: Curves.ease,
+                    );
+                  },
+                  child: Container(
+                    width: 150,
+                    height: 150,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color:
+                            _currentPage == index ? Colors.blue : Colors.grey,
+                        width: 2,
+                      ),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Image.network(productQuery['images'][index],
+                        fit: BoxFit.cover),
+                  ),
+                );
+              },
+              childCount: productQuery['images'].length,
+            ),
+          ),
 
           SliverList(
             delegate: SliverChildListDelegate([
@@ -200,19 +206,21 @@ class _ProductPageViewState extends State<ProductPageView> {
     );
   }
 
-  Widget buildImageSlider(){
-    return PageView.builder( 
-    controller:  _pageController,
-    itemCount: productQuery.length,
-    itemBuilder: (context, index){
-      return Image.network(productQuery[index]['images'],fit: BoxFit.cover,);
-
-    },
-    onPageChanged: (index){
-      setState(() {
-        _currentPage = index;
-      });
-    },
+  Widget buildImageSlider() {
+    return PageView.builder(
+      controller: _pageController,
+      itemCount: productQuery['images'].length,
+      itemBuilder: (context, index) {
+        return Image.network(
+          productQuery['images'][index],
+          fit: BoxFit.cover,
+        );
+      },
+      onPageChanged: (index) {
+        setState(() {
+          _currentPage = index;
+        });
+      },
     );
   }
 }

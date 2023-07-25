@@ -57,7 +57,7 @@ class ListBestSales extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>  ProductPageView()),
+                              builder: (context) =>  const ProductPageView()),
                         );
                       },
                       child: Container(

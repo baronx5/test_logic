@@ -5,12 +5,13 @@ const List<String> list = <String>['One', 'Two', 'Three', 'Four'];
 
 Map<String, dynamic> productQuery = {
   'product_id': '1',
-  'name': '1',
+  'name': 'Product name here',
   'description': 'Natural apple juice',
   'price': '1',
   'images': [
     'https://images.unsplash.com/photo-1611930021559-4a5cb5c38da3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60',
     'https://images.unsplash.com/photo-1611930021592-a8cfd5319ceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60',
+    'https://images.unsplash.com/photo-1611930021698-a55ec4d5fe6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60',
     'https://images.unsplash.com/photo-1611930021698-a55ec4d5fe6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60',
   ]
 };
@@ -39,7 +40,7 @@ class _ProductPageViewState extends State<ProductPageView> {
             flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
                 title: Text(
-                  "kokoko",
+                  productQuery['name'],
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
                 background: buildImageSlider()),
@@ -60,50 +61,54 @@ class _ProductPageViewState extends State<ProductPageView> {
               ),
             ],
           ),
-          SliverGrid(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4, mainAxisSpacing: 8, crossAxisSpacing: 8),
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                return GestureDetector(
-                  onTap: () {
-                    _pageController.animateToPage(
-                      index,
-                      duration: const Duration(milliseconds: 500),
-                      curve: Curves.ease,
-                    );
-                  },
-                  child: Container(
-                    width: 150,
-                    height: 150,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color:
-                            _currentPage == index ? Colors.blue : Colors.grey,
-                        width: 2,
-                      ),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Image.network(productQuery['images'][index],
-                        fit: BoxFit.cover),
-                  ),
-                );
-              },
-              childCount: productQuery['images'].length,
-            ),
-          ),
-
           SliverList(
             delegate: SliverChildListDelegate([
               Directionality(
                 textDirection: TextDirection.rtl,
-                child: Container(
-                  margin:
+                child: Padding(
+                  padding:
                       const EdgeInsets.only(top: 15.0, left: 15.0, right: 15.0),
                   //color: Colors.red,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
+                      SizedBox(
+                        height: 80,
+                        child: ListView.builder(
+                          shrinkWrap: true,
+                          itemCount: productQuery['images'].length,
+                          itemBuilder: (context, index) {
+                            return GestureDetector(
+                              onTap: () {
+                                _pageController.animateToPage(
+                                  index,
+                                  duration: const Duration(milliseconds: 500),
+                                  curve: Curves.ease,
+                                );
+                              },
+                              child: Container(
+                                margin: const EdgeInsets.only(left: 10.0),
+                                width: 80,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: NetworkImage(
+                                          productQuery['images'][index]),
+                                      fit: BoxFit.cover),
+                                  border: Border.all(
+                                    color: _currentPage == index
+                                        ? AppTheme.colors.color4
+                                        : Colors.grey,
+                                    width: 2,
+                                  ),
+                                  borderRadius: BorderRadius.circular(50),
+                                ),
+                              ),
+                            );
+                          },
+                          scrollDirection: Axis.horizontal,
+                        ),
+                      ),
+                      const Divider(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -117,7 +122,6 @@ class _ProductPageViewState extends State<ProductPageView> {
                           ),
                         ],
                       ),
-                      const Divider(),
                       const Text(
                           'التركيبة العطرية: توت العليق، كريستالات العنبر، بتلات الورد المخملية، الباتشولي الكريمي، ومسك الموكا.'),
                       const Divider(),
@@ -199,9 +203,9 @@ class _ProductPageViewState extends State<ProductPageView> {
                   ),
                 ),
               )
-            ]), //SliverChildBuildDelegate
-          ) //SliverList
-        ], //<Widget>[]
+            ]),
+          )
+        ],
       ),
     );
   }

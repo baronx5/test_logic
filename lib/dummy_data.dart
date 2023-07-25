@@ -27,7 +27,7 @@ final List<Map<String, dynamic>> listOfProducts = [
     "price": "12.0",
     "details": "good item for now.",
     "imgUrl":
-        "https://images.pexels.com/photos/6621472/pexels-photo-6621472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "https://images.unsplash.com/photo-1611930021559-4a5cb5c38da3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60",
   },
   {
     "name": "banana",

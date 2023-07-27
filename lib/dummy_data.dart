@@ -27,7 +27,12 @@ final List<Map<String, dynamic>> product = [
     "price": "12.0",
     "details": "good item for now.",
     "images":
-        ["https://images.unsplash.com/photo-1611930021559-4a5cb5c38da3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60"],
+        [
+    'https://images.unsplash.com/photo-1611930021559-4a5cb5c38da3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60',
+    'https://images.unsplash.com/photo-1611930021592-a8cfd5319ceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60',
+    'https://images.unsplash.com/photo-1611930021698-a55ec4d5fe6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60',
+    'https://images.unsplash.com/photo-1611930021698-a55ec4d5fe6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60',
+  ],
   },
   {
     "name": "ريبان الشمسية",

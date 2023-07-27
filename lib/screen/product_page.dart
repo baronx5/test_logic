@@ -92,7 +92,7 @@ class _ProductPageViewState extends State<ProductPageView> {
                                 width: 50,
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
-                                    colorFilter: _currentPage == index? ColorFilter.mode(Colors.white.withOpacity(0.5), BlendMode.dstATop): ColorFilter.mode(Colors.white.withOpacity(0), BlendMode.dstATop),
+                                    colorFilter: _currentPage == index? ColorFilter.mode(Colors.white.withOpacity(0.5), BlendMode.dstATop): ColorFilter.mode(Colors.white.withOpacity(1), BlendMode.dstATop),
                                       image: NetworkImage(
                                           productQuery['images'][index]),
                                       fit: BoxFit.cover),

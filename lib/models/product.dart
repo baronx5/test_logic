@@ -1,51 +1,53 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 
 class ListOfProducts {
 
 String name;
-String imgUrl;
 String price;
 String details;
+List<String> images = [];
+
   ListOfProducts({
     required this.name,
-    required this.imgUrl,
     required this.price,
     required this.details,
+    required this.images,
   });
 
 
   ListOfProducts copyWith({
     String? name,
-    String? imgUrl,
     String? price,
     String? details,
+    List<String>? images,
   }) {
     return ListOfProducts(
       name: name ?? this.name,
-      imgUrl: imgUrl ?? this.imgUrl,
       price: price ?? this.price,
       details: details ?? this.details,
+      images: images ?? this.images,
     );
   }
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
       'name': name,
-      'imgUrl': imgUrl,
       'price': price,
       'details': details,
+      'images': images,
     };
   }
 
   factory ListOfProducts.fromMap(Map<String, dynamic> map) {
     return ListOfProducts(
       name: map['name'] as String,
-      imgUrl: map['imgUrl'] as String,
       price: map['price'] as String,
       details: map['details'] as String,
-    );
+      images: List<String>.from((map['images'] as List<String>),
+      ));
   }
 
   String toJson() => json.encode(toMap());
@@ -54,7 +56,7 @@ String details;
 
   @override
   String toString() {
-    return 'ListOfProducts(name: $name, imgUrl: $imgUrl, price: $price, details: $details)';
+    return 'ListOfProducts(name: $name, price: $price, details: $details, images: $images)';
   }
 
   @override
@@ -63,16 +65,16 @@ String details;
   
     return 
       other.name == name &&
-      other.imgUrl == imgUrl &&
       other.price == price &&
-      other.details == details;
+      other.details == details &&
+      listEquals(other.images, images);
   }
 
   @override
   int get hashCode {
     return name.hashCode ^
-      imgUrl.hashCode ^
       price.hashCode ^
-      details.hashCode;
+      details.hashCode ^
+      images.hashCode;
   }
 }

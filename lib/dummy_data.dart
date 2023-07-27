@@ -26,28 +26,21 @@ final List<Map<String, dynamic>> listOfProducts = [
     "name": "ريبان الشمسية",
     "price": "12.0",
     "details": "good item for now.",
-    "imgUrl":
-        "https://images.unsplash.com/photo-1611930021559-4a5cb5c38da3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60",
+    "images":
+        ["https://images.unsplash.com/photo-1611930021559-4a5cb5c38da3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=900&q=60"],
   },
   {
-    "name": "banana",
+    "name": "ريبان الشمسية",
     "price": "12.0",
     "details": "good item for now.",
-    "imgUrl":
-        "https://images.pexels.com/photos/5462207/pexels-photo-5462207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "images":
+        ["https://images.unsplash.com/photo-1567721913486-6585f069b332?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=988&q=80"],
   },
   {
-    "name": "orange",
+    "name": "ريبان الشمسية",
     "price": "12.0",
     "details": "good item for now.",
-    "imgUrl":
-        "https://images.pexels.com/photos/5797999/pexels-photo-5797999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  },
-  {
-    "name": "orange",
-    "price": "12.0",
-    "details": "good item for now.",
-    "imgUrl":
-        "https://images.pexels.com/photos/8131576/pexels-photo-8131576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "images":
+        ["https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"],
   },
 ];

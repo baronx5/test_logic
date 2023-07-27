@@ -68,7 +68,7 @@ class ListBestSales extends StatelessWidget {
                         alignment: Alignment.topLeft,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                              image: NetworkImage(cat[i].imgUrl),
+                              image: NetworkImage(cat[i].images[0]),
                               fit: BoxFit.cover),
                         ),
                         child: const Padding(

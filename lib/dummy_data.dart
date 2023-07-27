@@ -21,7 +21,7 @@ final List<Map<String, dynamic>> mylist = [
   },
 ];
 
-final List<Map<String, dynamic>> listOfProducts = [
+final List<Map<String, dynamic>> product = [
   {
     "name": "ريبان الشمسية",
     "price": "12.0",

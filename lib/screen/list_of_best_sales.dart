@@ -10,8 +10,7 @@ class ListBestSales extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<ListOfProducts> cat =
-        listOfProducts.map((e) => ListOfProducts.fromMap(e)).toList();
+    List<ListOfProducts> products = product.map((e) => ListOfProducts.fromMap(e)).toList();
 
     return Column(
       children: [
@@ -44,7 +43,7 @@ class ListBestSales extends StatelessWidget {
           height: 400,
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: cat.length,
+              itemCount: products.length,
               itemBuilder: (context, i) {
                 // ندخلها بالبلدر علشان اللوب
                 return Column(
@@ -68,7 +67,7 @@ class ListBestSales extends StatelessWidget {
                         alignment: Alignment.topLeft,
                         decoration: BoxDecoration(
                           image: DecorationImage(
-                              image: NetworkImage(cat[i].images[0]),
+                              image: NetworkImage(products[i].images[0]),
                               fit: BoxFit.cover),
                         ),
                         child: const Padding(
@@ -77,10 +76,10 @@ class ListBestSales extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      cat[i].name,
+                      products[i].name,
                       style: Theme.of(context).textTheme.labelMedium,
                     ),
-                    Text(cat[i].price),
+                    Text(products[i].price),
                   ],
                 );
               }),

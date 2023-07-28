@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_logic/Theme/app_theme.dart';
 
 class WomenTab extends StatefulWidget {
   const WomenTab({
@@ -99,7 +100,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
             padding:
                 const EdgeInsets.symmetric(vertical: 16.0, horizontal: 8.0),
             color: _selectedIndex == index
-                ? Colors.red[300]
+                ? AppTheme.colors.color2
                 : Colors.white, // Use local selectedIndex state here
             child: Text(widget.drawerItems[index]),
           ),

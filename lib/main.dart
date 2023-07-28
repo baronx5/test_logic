@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_logic/screen/tab_page.dart';
 import 'Theme/app_theme.dart';
 import 'main_home_page.dart';
 
@@ -36,10 +37,7 @@ class _MainNavigationState extends State<MainNavigation> {
       'Index 2: School',
       style: optionStyle,
     ),
-    Text(
-      'Index 3: Settings',
-      style: optionStyle,
-    ),
+    TabPageView(),
     Text(
       'Index 3: Account',
       style: optionStyle,
@@ -72,8 +70,8 @@ class _MainNavigationState extends State<MainNavigation> {
             backgroundColor: AppTheme.colors.color0,
           ),
            BottomNavigationBarItem(
-            icon: const Icon(Icons.favorite_border_outlined),
-            label: 'المفضلة',
+            icon: const Icon(Icons.grid_view),
+            label: 'الأقسام',
             backgroundColor: AppTheme.colors.color0,
           ),
            BottomNavigationBarItem(

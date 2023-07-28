@@ -121,7 +121,7 @@ class AppColors {
   final black = const Color(0xFF000000);
   final color0 = const Color(0xFFf8f9fa);
   final color1 = const Color(0xFFe9ecef);
-  final color2 = const Color(0xFFdee2e6);
+  final color2 = const Color(0xFFa3a8ad);
   final color3 = const Color(0xFF495057);
   final color4 = const Color(0xFF212529);
 

@@ -84,7 +84,7 @@ class ListBestSales extends StatelessWidget {
                 );
               }),
         ),
-        Divider(),
+        const Divider(),
         Container(
           height: 200,
           width: double.infinity,

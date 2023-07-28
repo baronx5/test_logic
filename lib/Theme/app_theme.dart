@@ -55,6 +55,10 @@ class AppTheme {
           fontSize: 24,
           color: AppTheme.colors.color0,
         ),
+        headlineLarge: TextStyle(
+          fontSize: 35,
+          color: AppTheme.colors.color0,
+        ),
         labelMedium: TextStyle(fontSize: 16, color: AppTheme.colors.color4, fontWeight: FontWeight.bold)
       ),
       ////////////////////////////// BUTTONS //////////////////////////////

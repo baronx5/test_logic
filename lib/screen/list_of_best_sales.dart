@@ -10,7 +10,8 @@ class ListBestSales extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<ListOfProducts> products = product.map((e) => ListOfProducts.fromMap(e)).toList();
+    List<ListOfProducts> products =
+        product.map((e) => ListOfProducts.fromMap(e)).toList();
 
     return Column(
       children: [
@@ -23,8 +24,7 @@ class ListBestSales extends StatelessWidget {
                 // TODO HERE FOR TESTING.
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => LoginPage()),
+                  MaterialPageRoute(builder: (context) => LoginPage()),
                 );
               }),
               child: const Text('تسوق المزيد من الماركات')),
@@ -56,7 +56,7 @@ class ListBestSales extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>  const ProductPageView()),
+                              builder: (context) => const ProductPageView()),
                         );
                       },
                       child: Container(
@@ -83,6 +83,21 @@ class ListBestSales extends StatelessWidget {
                   ],
                 );
               }),
+        ),
+        Divider(),
+        Container(
+          height: 200,
+          width: double.infinity,
+          alignment: Alignment.center,
+          //color: Colors.red,
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                fit: BoxFit.cover,
+            image: NetworkImage(
+              'https://images.pexels.com/photos/7778883/pexels-photo-7778883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            ),
+          )),
+          child: Text('SALES DECEMBER 2023', style: Theme.of(context).textTheme.headlineLarge,),
         ),
       ],
     );

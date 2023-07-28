@@ -1,23 +1,23 @@
 final List<Map<String, dynamic>> mylist = [
   {
-    "name": "الكويت",
+    "name": "شيرتات",
     "imgUrl":
-        "https://images.unsplash.com/photo-1519669011783-4eaa95fa1b7d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=679&q=80",
+        "https://images.pexels.com/photos/9594147/pexels-photo-9594147.jpeg?auto=compress&cs=tinysrgb&w=1200",
   },
   {
     "name": "banana",
     "imgUrl":
-        "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80",
+        "https://images.pexels.com/photos/9603628/pexels-photo-9603628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     "name": "orange",
     "imgUrl":
-        "https://images.unsplash.com/photo-1475180098004-ca77a66827be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=686&q=80",
+        "https://images.pexels.com/photos/9595287/pexels-photo-9595287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     "name": "orange",
     "imgUrl":
-        "https://images.unsplash.com/photo-1475180098004-ca77a66827be?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=686&q=80",
+        "https://images.pexels.com/photos/9595073/pexels-photo-9595073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
 ];
 
@@ -35,11 +35,11 @@ final List<Map<String, dynamic>> product = [
   ],
   },
   {
-    "name": "ريبان الشمسية",
+    "name": "نظارة شمسية كاريرا",
     "price": "12.0",
     "details": "good item for now.",
     "images":
-        ["https://images.unsplash.com/photo-1567721913486-6585f069b332?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=988&q=80"],
+        ["https://images.pexels.com/photos/9595069/pexels-photo-9595069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"],
   },
   {
     "name": "ريبان الشمسية",

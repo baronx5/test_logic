@@ -16,7 +16,7 @@ class MyHomePage extends StatelessWidget {
           leading: const Icon(Icons.shopping_bag_outlined),
         ),
         body: ListView(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.only(left:10.0, right: 10.0),
           scrollDirection: Axis.vertical,
           children: const [
             WelcomeMsg(),

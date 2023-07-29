@@ -19,6 +19,7 @@ class TabPageView extends StatelessWidget {
             toolbarHeight: 50,
             bottom: TabBar(
               labelColor: AppTheme.colors.color4,
+              labelStyle: Theme.of(context).textTheme.bodyMedium,
               unselectedLabelColor: AppTheme.colors.color2,
               indicatorColor: AppTheme.colors.color3,
               isScrollable: false,

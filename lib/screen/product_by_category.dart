@@ -71,21 +71,24 @@ class _ProductByCategoryState extends State<ProductByCategory> {
         padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
         child: Column(
           children: [
-            OutlinedButton(
-                onPressed: () {
-                  setState(() {
-                    isAscending = !isAscending;
-                  });
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(isAscending
-                        ? Icons.arrow_upward
-                        : Icons.arrow_downward),
-                    const Text('عرض حسب السعر'),
-                  ],
-                )),
+            SizedBox(
+              height: 50,
+              child: OutlinedButton(
+                  onPressed: () {
+                    setState(() {
+                      isAscending = !isAscending;
+                    });
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(isAscending
+                          ? Icons.arrow_upward
+                          : Icons.arrow_downward),
+                      const Text('عرض حسب السعر'),
+                    ],
+                  )),
+            ),
             Expanded(
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

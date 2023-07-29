@@ -62,31 +62,43 @@ class _ProductByCategoryState extends State<ProductByCategory> {
           'السوق العربي',
         ),
         leading: const Icon(Icons.shopping_bag_outlined),
-        actions: [
-          IconButton(
-            icon: Icon(isAscending ? Icons.arrow_upward : Icons.arrow_downward),
-            onPressed: () {
-              setState(() {
-                isAscending = !isAscending;
-              });
-            },
-          ),
-        ],
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
-        child: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, // You can adjust the number of columns here
-            crossAxisSpacing: 5.0,
-            mainAxisSpacing: 5.0,
-            childAspectRatio: 0.6,
-          ),
-          itemCount: products.length,
-          itemBuilder: (context, index) {
-            final product = products[index];
-            return buildProductCard(product);
-          },
+        child: Column(
+          children: [
+            OutlinedButton(
+                onPressed: () {
+                  setState(() {
+                    isAscending = !isAscending;
+                  });
+                },
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(isAscending
+                        ? Icons.arrow_upward
+                        : Icons.arrow_downward),
+                    const Text('عرض حسب السعر'),
+                  ],
+                )),
+            Expanded(
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount:
+                      2, // You can adjust the number of columns here
+                  crossAxisSpacing: 5.0,
+                  mainAxisSpacing: 5.0,
+                  childAspectRatio: 0.6,
+                ),
+                itemCount: products.length,
+                itemBuilder: (context, index) {
+                  final product = products[index];
+                  return buildProductCard(product);
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );

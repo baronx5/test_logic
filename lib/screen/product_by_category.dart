@@ -61,7 +61,11 @@ class _ProductByCategoryState extends State<ProductByCategory> {
         title: const Text(
           'السوق العربي',
         ),
-        leading: const Icon(Icons.shopping_bag_outlined),
+        leading: GestureDetector(onTap:() => Navigator.of(context).pop(),child: const Icon(Icons.arrow_back)),
+        actions: const [Padding(
+          padding: EdgeInsets.only(right: 10.0),
+          child: Icon(Icons.shopping_bag_outlined),
+        )],
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),

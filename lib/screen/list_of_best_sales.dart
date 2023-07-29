@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_logic/screen/Auth/login.dart';
+import 'package:test_logic/screen/product_by_category.dart';
 import 'package:test_logic/screen/product_page.dart';
 
 import '../dummy_data.dart';
@@ -24,7 +25,7 @@ class ListBestSales extends StatelessWidget {
                 // TODO HERE FOR TESTING.
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LoginPage()),
+                  MaterialPageRoute(builder: (context) => ProductByCategory()),
                 );
               }),
               child: const Text('تسوق المزيد من الماركات')),
@@ -92,12 +93,15 @@ class ListBestSales extends StatelessWidget {
           //color: Colors.red,
           decoration: const BoxDecoration(
               image: DecorationImage(
-                fit: BoxFit.cover,
+            fit: BoxFit.cover,
             image: NetworkImage(
               'https://images.pexels.com/photos/7778883/pexels-photo-7778883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
             ),
           )),
-          child: Text('SALES DECEMBER 2023', style: Theme.of(context).textTheme.headlineLarge,),
+          child: Text(
+            'SALES DECEMBER 2023',
+            style: Theme.of(context).textTheme.headlineLarge,
+          ),
         ),
       ],
     );

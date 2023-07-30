@@ -31,9 +31,9 @@ class ProfilePage extends StatelessWidget {
             border: Border(bottom: BorderSide(color: Colors.black12)),
           ),
           child:  ListTile(
-            title: Text('adress comes here for example', style: Theme.of(context).textTheme.bodyMedium,),
+            title: Text('My orders list', style: Theme.of(context).textTheme.bodyMedium,),
             leading: const Icon(Icons.card_giftcard),
-            trailing: const Icon(Icons.menu),
+            trailing: const Icon(Icons.arrow_forward),
           ),
         ),
         Container(
@@ -43,9 +43,21 @@ class ProfilePage extends StatelessWidget {
             border: Border(bottom: BorderSide(color: Colors.black12)),
           ),
           child:  ListTile(
-            title: Text('Hello', style: Theme.of(context).textTheme.bodyMedium,),
-            leading: const Icon(Icons.card_giftcard),
-            trailing: const Icon(Icons.menu),
+            title: Text('Adress comes here for example', style: Theme.of(context).textTheme.bodyMedium,),
+            leading: const Icon(Icons.location_on),
+            trailing: const Icon(Icons.arrow_forward),
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.symmetric(horizontal: 10.0),
+          decoration: const BoxDecoration(
+            color: Colors.white,
+            border: Border(bottom: BorderSide(color: Colors.black12)),
+          ),
+          child:  ListTile(
+            title: Text('Change language', style: Theme.of(context).textTheme.bodyMedium,),
+            leading: const Icon(Icons.language),
+            trailing: const Icon(Icons.arrow_forward),
           ),
         ),
 

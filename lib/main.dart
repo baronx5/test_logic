@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_logic/screen/profile_page.dart';
 import 'package:test_logic/screen/tab_page.dart';
 import 'Theme/app_theme.dart';
 import 'main_home_page.dart';
@@ -38,10 +39,7 @@ class _MainNavigationState extends State<MainNavigation> {
       style: optionStyle,
     ),
     TabPageView(),
-    Text(
-      'Index 3: Account',
-      style: optionStyle,
-    ),
+    ProfilePage(),
     
   ];
 

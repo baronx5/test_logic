@@ -40,8 +40,9 @@ class ListBestSales extends StatelessWidget {
               )),
         ),
         SizedBox(
-          height: 400,
+          height: 380,
           child: ListView.builder(
+            shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               itemCount: products.length,
               itemBuilder: (context, i) {
@@ -66,7 +67,7 @@ class ListBestSales extends StatelessWidget {
                         height: 300,
                         alignment: Alignment.topLeft,
                         decoration: BoxDecoration(
-                          image: DecorationImage(
+                        image: DecorationImage(
                               image: NetworkImage(products[i].images[0]),
                               fit: BoxFit.cover),
                         ),

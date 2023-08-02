@@ -48,4 +48,11 @@ final List<Map<String, dynamic>> product = [
     "images":
         ["https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"],
   },
+    {
+    "name": "ريبان الشمسية",
+    "price": "12.0",
+    "details": "good item for now.",
+    "images":
+        ["https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"],
+  },
 ];
